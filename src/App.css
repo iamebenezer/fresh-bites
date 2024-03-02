@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: nunito;
+    src: url(/src/assets/fonts/Nunito-SemiBold.otf);
+}
+section, footer{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    
+}
+.web-scroll{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.floating{
+    animation-name:floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-top: 5px;
+}
+@keyframes floating {
+        0% {transform: translate(0, 0px);}
+        50% {transform: translate(0, 15px);}
+        100% {transform: translate(0, -0px);}
+}
+.spin{
+    animation-name: spin;
+    animation-duration:8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@keyframes spin {
+            from{
+                transform: rotate(0deg);
+            }        
+            to{
+                transform: rotate(360deg);
+            }
+}
